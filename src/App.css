@@ -1,0 +1,200 @@
+body {
+  margin: 0;
+  background: #F4F5F8; 
+}
+
+.container {
+  background-color: white;
+  padding: 10px; 
+  display: left;
+  justify-content: space-between;
+  align-items: center;
+}
+
+
+.options-dropdown {
+  position: absolute;
+  top: 45px;
+  width: 250px;
+  left: 20px; /* Adjust the value to position it to the left */
+  background-color: white;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+}
+
+.dropdown-options {
+  /* display: flex; */
+  width: 100%
+}
+
+
+.button {
+  background: white;
+  padding: 5px;
+  border-radius: 4px;
+  margin-bottom: 4px;
+  margin-left: 10px;
+  border: 1px solid gray; /* Add a 1px solid gray border */
+  cursor: pointer; /* Change the cursor to a pointer when hovering over the button */
+}
+
+.button:hover {
+  cursor: pointer;
+}
+
+.button-icons {
+  color: grey;
+}
+
+.options {
+  display: flex;
+  flex-direction: column;
+}
+
+.label {
+  margin-bottom: 10px;
+}
+
+.select {
+  margin-bottom: 20px;
+}
+
+/* Update this in your App.css */
+.table-header {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap; /* Allow items to wrap to the next line if needed */
+}
+
+.table-header > div {
+  margin-left: 20px;
+}
+
+/* Add this to adjust the margin for the first div */
+.table-header > div:first-child {
+  margin-left: 0;
+}
+
+
+.left-section {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+}
+
+.icons {
+  margin-right: 20px; 
+}
+
+.user-header {
+  margin-left: 20px;
+  font-weight: 500;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.user-header p {
+  margin-right: 10px; 
+}
+
+.priority-header {
+  margin-left: 20px;
+  font-weight: 500;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.priority-header p {
+  margin-right: 10px; 
+}
+
+.status-header {
+  margin-left: 20px;
+  font-weight: 500;
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.status-header p {
+  margin-right: 10px; 
+}
+
+.ticket-count {
+  color: gray;
+}
+
+.scrollable-header {
+  overflow-x: auto;
+  max-width: 100%;
+}
+
+.table-wrapper {
+  max-height: 100%; 
+  overflow-y: auto;
+}
+.ticket-card {
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  background-color: white;
+  padding: 15px;
+  width: 350px; 
+  margin: 20px;
+}
+
+.ticket-card p {
+  margin: 0;
+}
+
+.ticket-card .title {
+  margin-top: 5px;
+  font-weight: 500;
+}
+
+.ticket-id {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: grey;
+}
+
+.ticket-id p {
+  margin-right: 0px;
+}
+
+.priority-icon {
+  display: flex;
+}
+
+.priority-icon svg {
+  margin-right: 0px;
+}
+
+.tags {
+  margin-top: 5px;
+}
+
+/* App.css */
+.ticket-details-box {
+  margin-top: 15px;
+  margin-right: 10px;
+  padding: 4px;
+  border: 1px solid #F4F5F8; 
+  border-radius: 5px;
+}
+
+.ticket-card .tags {
+  display: flex;
+  align-items: center;
+  color: gray
+}
+
+.ticket-card .tags svg {
+  width: 12px; 
+  height: 12px; 
+  margin-right: 5px; 
+}
