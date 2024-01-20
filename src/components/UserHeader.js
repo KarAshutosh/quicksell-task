@@ -3,7 +3,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faPlus, faEllipsisH, faUser } from '@fortawesome/free-solid-svg-icons';
-import '../App.css'; // Import your App.css file
+import '../App.css'; 
 
 const UserHeader = ({ user, ticketCount }) => {
   return (

@@ -43,7 +43,7 @@ const TicketTable = ({ groupBy, orderBy }) => {
 
   const groupData = () => {
     if (groupBy === 'users') {
-      // Group by users
+
       const groupedByUser = {};
       apiData.tickets.forEach((ticket) => {
         const { userId } = ticket;
@@ -54,7 +54,7 @@ const TicketTable = ({ groupBy, orderBy }) => {
       });
       return groupedByUser;
     } else if (groupBy === 'status') {
-      // Group by status
+
       const groupedByStatus = {};
       apiData.tickets.forEach((ticket) => {
         const { status } = ticket;
@@ -65,11 +65,11 @@ const TicketTable = ({ groupBy, orderBy }) => {
       });
       return groupedByStatus;
     } else if (groupBy === 'priority') {
-      // Group by priority
+
       const groupedByPriority = {};
       apiData.tickets.forEach((ticket) => {
         const { priority } = ticket;
-        const priorityNumber = parseInt(priority, 10); // Convert priority to number
+        const priorityNumber = parseInt(priority, 10); 
         if (!groupedByPriority[priorityNumber]) {
           groupedByPriority[priorityNumber] = [];
         }

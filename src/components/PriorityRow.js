@@ -19,7 +19,7 @@ const getPriorityIcon = (priority) => {
     case 4:
       return <FontAwesomeIcon icon={faExclamationTriangle} color="red" />;
     default:
-      return null; // You can customize this for 'no priority' case
+      return null; 
   }
 };
 

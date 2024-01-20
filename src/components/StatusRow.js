@@ -1,7 +1,7 @@
 // StatusRow.js
 import React from 'react';
 import PropTypes from 'prop-types';
-import '../App.css'; // Import your App.css file
+import '../App.css'; 
 
 const StatusRow = ({ status, tickets, ticketCount }) => {
   return (

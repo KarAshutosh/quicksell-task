@@ -2,8 +2,7 @@
 import React from 'react';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faSignal, faEllipsisH, faExclamationTriangle } from '@fortawesome/free-solid-svg-icons';
-import '@fortawesome/fontawesome-free/css/all.css'; // Import Font Awesome CSS
-// import { FaSignal, FaSignalAlt, FaSignalAlt2 } from 'react-icons/fa';
+import '@fortawesome/fontawesome-free/css/all.css'; 
 import { faCircle, faUser } from '@fortawesome/free-solid-svg-icons';
 import '../App.css'; 
 
@@ -20,7 +19,7 @@ const getPriorityIcon = (priority) => {
     case 4:
       return <FontAwesomeIcon icon={faExclamationTriangle} color="red" />;
     default:
-      return null; // You can customize this for 'no priority' case
+      return null; 
   }
 };
 
