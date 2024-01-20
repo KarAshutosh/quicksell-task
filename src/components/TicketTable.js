@@ -63,6 +63,21 @@ const TicketTable = ({ groupBy, orderBy }) => {
         }
         groupedByStatus[status].push(ticket);
       });
+      if (!groupedByStatus["Backlog"]) {
+        groupedByStatus["Backlog"] = [];
+      } 
+      if (!groupedByStatus["Todo"]) {
+        groupedByStatus["Todo"] = [];
+      } 
+      if (!groupedByStatus["In progress"]) {
+        groupedByStatus["In Progress"] = [];
+      } 
+      if (!groupedByStatus["Done"]) {
+        groupedByStatus["Done"] = [];
+      } 
+      if (!groupedByStatus["Cancelled"]) {
+        groupedByStatus["Cancelled"] = [];
+      } 
       return groupedByStatus;
     } else if (groupBy === 'priority') {
 
@@ -75,6 +90,21 @@ const TicketTable = ({ groupBy, orderBy }) => {
         }
         groupedByPriority[priorityNumber].push(ticket);
       });
+      if (!groupedByPriority[0]) {
+        groupedByPriority[0] = [];
+      }
+      if (!groupedByPriority[1]) {
+        groupedByPriority[1] = [];
+      }
+      if (!groupedByPriority[2]) {
+        groupedByPriority[2] = [];
+      }
+      if (!groupedByPriority[3]) {
+        groupedByPriority[3] = [];
+      }
+      if (!groupedByPriority[4]) {
+        groupedByPriority[4] = [];
+      }
       return groupedByPriority;
     }
     return {};
