@@ -5,7 +5,7 @@ import '../App.css';
 
 const StatusRow = ({ status, tickets, ticketCount }) => {
   return (
-    <div className="status-row ">
+    <div className="status-row">
       <p>{status} <span className="ticket-count">{ticketCount}</span></p>
       {tickets.map((ticket) => (
         <p key={ticket.id}>{ticket.title}</p>

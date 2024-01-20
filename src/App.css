@@ -140,6 +140,10 @@ body {
   margin-right: 10px; 
 }
 
+.status-row {
+  min-width: 350px;
+}
+
 .status-header {
   margin-left: 20px;
   font-weight: 500;
