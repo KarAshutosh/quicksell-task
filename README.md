@@ -1,7 +1,7 @@
 # Made by Ashutosh Karanam
 BITS ID: **2020AAPS1441G**
 
-Hosted code using AWS and CodePipeline on [chainconnect.one](https://chainconnect.one) or on IP address [52.66.243.124](http://52.66.243.124) 
+Hosted code using AWS and CodePipeline on [ashutosh-quicksell.ap-south-1.elasticbeanstalk.com](http://ashutosh-quicksell.ap-south-1.elasticbeanstalk.com) or on [chainconnect.one](https://chainconnect.one)
 
 # Getting Started with Create React App
 
