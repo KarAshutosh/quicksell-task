@@ -131,6 +131,7 @@ body {
 
 .priority-header {
   margin-left: 20px;
+  min-width: 350px;
   font-weight: 500;
   justify-content: space-between;
   align-items: center;
@@ -146,6 +147,7 @@ body {
 
 .status-header {
   margin-left: 20px;
+  min-width: 350px;
   font-weight: 500;
   justify-content: space-between;
   align-items: center;
