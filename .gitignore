@@ -2,6 +2,7 @@
 
 backup
 backup.zip
+temp.txt
 
 # dependencies
 /node_modules
