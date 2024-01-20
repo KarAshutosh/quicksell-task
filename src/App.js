@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import TicketTable from './components/TicketTable';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faAngleDown } from '@fortawesome/free-solid-svg-icons';
@@ -21,6 +21,11 @@ const App = () => {
     setOrderBy(event.target.value);
   };
 
+  useEffect(() => {
+    // Set default order to 'priority' on component mount
+    setOrderBy('priority');
+  }, []);
+
   return (
     <div>
       <div className="container">
@@ -37,9 +42,7 @@ const App = () => {
           <div className="options-dropdown">
             <div className="dropdown-options">
               <label className="label">
-
                 <span>Grouping</span>
-                
                 <span>
                   <select className="select" value={groupBy} onChange={handleGroupByChange}>
                     <option value="users">User</option>
@@ -47,22 +50,17 @@ const App = () => {
                     <option value="priority">Priority</option>
                   </select>
                 </span>
-
               </label>
             </div>
-
             <div className="dropdown-options">
               <label className="label">
-
                 <span>Ordering</span>
-
                 <span>
                   <select className="select" value={orderBy} onChange={handleOrderByChange}>
                     <option value="priority">Priority</option>
                     <option value="title">Title</option>
                   </select>
                 </span>
-
               </label>
             </div>
           </div>
