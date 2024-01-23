@@ -1,73 +1,34 @@
-import React, { useState, useEffect } from 'react';
-import TicketTable from './components/TicketTable';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars, faAngleDown } from '@fortawesome/free-solid-svg-icons';
+import React, { useState } from 'react';
 import './App.css';
+import Timer from './components/Timer';
 
 const App = () => {
-  const [displayOptions, setDisplayOptions] = useState(false);
-  const [groupBy, setGroupBy] = useState('status');
-  const [orderBy, setOrderBy] = useState('');
+  const initialTime = 300;
+  const [isRunning, setIsRunning] = useState(false);
+  const [resetTime, setResetTime] = useState(initialTime);
 
-  const handleDisplayClick = () => {
-    setDisplayOptions(!displayOptions);
+  const handleStart = () => {
+    setIsRunning(true);
   };
 
-  const handleGroupByChange = (event) => {
-    setGroupBy(event.target.value);
+  const handleStop = () => {
+    setIsRunning(false);
   };
 
-  const handleOrderByChange = (event) => {
-    setOrderBy(event.target.value);
+  const handleReset = () => {
+    if (isRunning) {
+      setIsRunning(false);
+    }
+    setResetTime(initialTime);
   };
-
-  useEffect(() => {
-    // Set default order to 'priority' on component mount
-    setOrderBy('priority');
-  }, []);
 
   return (
-    <div>
-      <div className="container">
-        <button className="button" onClick={handleDisplayClick}>
-          <span className='button-icons'>
-            <FontAwesomeIcon icon={faBars} />           
-          </span>
-          &nbsp; Display &nbsp;
-          <span className='button-icons'>
-            <FontAwesomeIcon icon={faAngleDown} />
-          </span>
-        </button>
-        {displayOptions && (
-          <div className="options-dropdown">
-            <div className="dropdown-options">
-              <label className="label">
-                <span>Grouping</span>
-                <span>
-                  <select className="select" value={groupBy} onChange={handleGroupByChange}>
-                    <option value="users">User</option>
-                    <option value="status">Status</option>
-                    <option value="priority">Priority</option>
-                  </select>
-                </span>
-              </label>
-            </div>
-            <div className="dropdown-options">
-              <label className="label">
-                <span>Ordering</span>
-                <span>
-                  <select className="select" value={orderBy} onChange={handleOrderByChange}>
-                    <option value="priority">Priority</option>
-                    <option value="title">Title</option>
-                  </select>
-                </span>
-              </label>
-            </div>
-          </div>
-        )}
-      </div>
-      <div className="table-wrapper">
-        <TicketTable groupBy={groupBy} orderBy={orderBy} />
+    <div className="container">
+      <Timer isRunning={isRunning} resetTime={resetTime} />
+      <div className="buttons">
+        <button className="start" onClick={handleStart}>Start</button>
+        <button className="stop" onClick={handleStop}>Stop</button>
+        <button className="reset" onClick={handleReset}>Reset</button>
       </div>
     </div>
   );
