@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 
 const Timer = (props) => {
-  const { isRunning, resetTime } = props;
+  const { isRunning, resetTime, isResetting } = props;
   const [seconds, setSeconds] = useState(resetTime);
 
   useEffect(() => {
@@ -19,12 +19,14 @@ const Timer = (props) => {
   useEffect(() => {
     if (!isRunning && seconds !== resetTime) {
       const timeoutId = setTimeout(() => {
-        setSeconds(resetTime);
+        if (isResetting) {
+          setSeconds(resetTime);
+        }
       }, 0);
 
       return () => clearTimeout(timeoutId);
     }
-  }, [isRunning, seconds, resetTime]);
+  }, [isRunning, seconds, resetTime, isResetting]);
 
   const formatTime = (timeInSeconds) => {
     const minutes = Math.floor(timeInSeconds / 60);
